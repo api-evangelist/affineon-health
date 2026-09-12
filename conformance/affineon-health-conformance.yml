@@ -1,0 +1,83 @@
+name: Affineon Health Conformance and Compliance
+description: >-
+  Cross-cutting standards and compliance posture asserted for Affineon Health.
+  Affineon publishes exactly two compliance claims, repeated as a single line on
+  every product page — "We're serious about security. Affineon is SOC2 and HIPAA
+  compliant." — and nothing further: no trust center, no audit report request page,
+  no security page, no /.well-known/security.txt, and no named auditor, report type
+  (Type I vs Type II), scope or period. The healthcare domain standards this market
+  runs on (FHIR, SMART on FHIR, US Core, HL7 v2, C-CDA) are DELIBERATELY NOT asserted
+  here: Affineon publishes no machine-readable contract of any kind, so there is no
+  spec location to point evidence at, and it is a consumer of the athenahealth EHR
+  APIs rather than a publisher of a clinical data interface of its own.
+generated: '2026-09-12'
+method: searched
+source: https://www.affineon.com/
+regulatory_regime: healthcare
+jurisdiction: united-states
+conformance:
+- id: hipaa
+  label: HIPAA
+  conforms: true
+  evidence: >-
+    "We're serious about security. Affineon is SOC2 and HIPAA compliant." — stated
+    on https://www.affineon.com/ , /labs-core , /rx-renewals , /embed and /athenahealth
+    (all HTTP 200, fetched 2026-09-12).
+  strength: self-attested
+  note: >-
+    A prose claim on marketing pages. No Business Associate Agreement template, HIPAA
+    attestation, or compliance page is published.
+- id: soc2
+  label: SOC 2
+  conforms: true
+  evidence: >-
+    "Affineon is SOC2 and HIPAA compliant." — https://www.affineon.com/ (HTTP 200,
+    fetched 2026-09-12).
+  strength: self-attested
+  note: >-
+    Written as "SOC2" with no report type (Type I or Type II), no auditing firm, no
+    audit period, and no route to request the report. No trust center exists at
+    trust.affineon.com, security.affineon.com, /security, /trust or /compliance.
+- id: fhir
+  label: HL7 FHIR
+  conforms: false
+  evidence: >-
+    No FHIR CapabilityStatement, resource surface, or FHIR mention was found on any
+    Affineon host. /labs-core, /rx-renewals, /embed and /athenahealth contain no
+    occurrence of FHIR, HL7, SMART on FHIR, USCDI or C-CDA (full-text scan of the
+    fetched HTML, 2026-09-12).
+  note: >-
+    Affineon integrates into the athenahealth inbox as a marketplace application and
+    consumes athenahealth's APIs; it publishes no clinical data interface of its own,
+    so there is no first-party contract in which to declare a domain standard.
+- id: oauth2
+  label: OAuth 2.0
+  conforms: false
+  evidence: >-
+    https://www.affineon.com/.well-known/oauth-authorization-server -> 404 and
+    /.well-known/openid-configuration -> 404 on every host probed 2026-09-12
+    (see well-known/affineon-health-well-known.yml). No public authorization surface.
+- id: rfc9457
+  label: RFC 9457 Problem Details
+  conforms: false
+  evidence: No OpenAPI or error reference is published, so no error envelope can be assessed.
+domain_standard:
+  asserted: false
+  candidates_probed: [fhir, smart-on-fhir, us-core, uscdi, hl7-v2, c-cda, dicom]
+  note: >-
+    Reward-only check, correctly left unclaimed. Affineon ships no contract, so no
+    domain standard can be read out of one. Recording a FHIR conformance from the fact
+    that the company works in healthcare would be a fabrication.
+x-evidence:
+  fetched: '2026-09-12'
+  probes:
+  - url: https://www.affineon.com/
+    http_status: 200
+  - url: https://www.affineon.com/embed
+    http_status: 200
+  - url: https://www.affineon.com/security
+    http_status: 404
+  - url: https://www.affineon.com/trust
+    http_status: 404
+  - url: https://www.affineon.com/.well-known/security.txt
+    http_status: 404

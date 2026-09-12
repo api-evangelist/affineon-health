@@ -1,0 +1,95 @@
+name: Affineon Health Well-Known Documents
+description: >-
+  Probe of RFC 8615 /.well-known/ discovery documents across every host the
+  Affineon Health record knows. Nothing was served: the marketing site is a
+  Webflow property that answers every /.well-known/* path with a 404 HTML page
+  reading "Invalid .well-known request", and the two HubSpot-hosted resource
+  centers answer with their standard 404 shell. No document was saved because
+  none was served, and no WellKnown pointer is wired into apis.yml — this file
+  records a measured absence, not a presence.
+generated: '2026-09-12'
+method: probed
+source: >-
+  Direct unauthenticated HTTPS GETs with a browser User-Agent, 2026-09-12.
+  Hosts enumerated from apis.yml common[] plus certificate-transparency records
+  for *.affineon.com (crt.sh). No API host exists — api.affineon.com,
+  docs.affineon.com, developers.affineon.com and app.affineon.com do not resolve.
+hosts:
+- host: www.affineon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: affineon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: resources.affineon.com
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+- host: inboxmanagement.affineon.com
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+x-note: >-
+  One agent-facing file IS served, but not under /.well-known/ — https://www.affineon.com/llms.txt
+  returns HTTP 200 text/plain with a first-party attribution and AI-usage policy. It is saved
+  verbatim at llms/affineon-health-llms.txt and pointed at with type LLMsTxt.

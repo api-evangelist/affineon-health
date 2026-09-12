@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /private
+
+Attribution: Cite "Affineon" with link to https://www.affineon.com
+Usage: No training or fine-tuning. Real-time answers only.

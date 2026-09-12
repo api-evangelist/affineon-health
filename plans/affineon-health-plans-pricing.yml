@@ -1,0 +1,87 @@
+name: Affineon Health Plans and Pricing
+description: >-
+  Published per-provider subscription pricing for Affineon's two clinical inbox
+  modules, read verbatim from the pricing table Affineon publishes on its Labs Core
+  and Rx Renewals product pages. Pricing is banded by the number of providers in the
+  practice, with a per-provider monthly price for a single module and a lower blended
+  per-provider price for the Labs + Rx bundle. There is no self-serve checkout and no
+  published API pricing — these are seat prices for the end-user product, sold through
+  a demo request.
+generated: '2026-09-12'
+method: searched
+source: https://www.affineon.com/labs-core
+docs:
+- https://www.affineon.com/labs-core
+- https://www.affineon.com/rx-renewals
+currency: USD
+billing_period: month
+pricing_unit: per provider
+self_serve: false
+signup: https://www.affineon.com/contact
+plan_count: 5
+plans:
+- name: 1-7 providers
+  tier: 1-7
+  price: 100
+  currency: USD
+  period: month
+  unit: per provider
+  product: Labs Core or Rx Renewals
+  bundle_price: 175
+  bundle_product: Bundle (Labs & Rx)
+  note: Entry band. Affineon markets Labs Core at "around $4 per day" per provider.
+- name: 8-19 providers
+  tier: 8-19
+  price: 95
+  currency: USD
+  period: month
+  unit: per provider
+  product: Labs Core or Rx Renewals
+  bundle_price: 165
+  bundle_product: Bundle (Labs & Rx)
+- name: 20-99 providers
+  tier: 20-99
+  price: 80
+  currency: USD
+  period: month
+  unit: per provider
+  product: Labs Core or Rx Renewals
+  bundle_price: 155
+  bundle_product: Bundle (Labs & Rx)
+- name: 100-249 providers
+  tier: 100-249
+  price: 75
+  currency: USD
+  period: month
+  unit: per provider
+  product: Labs Core or Rx Renewals
+  bundle_price: 145
+  bundle_product: Bundle (Labs & Rx)
+- name: 250+ providers
+  tier: 250+
+  price: null
+  currency: USD
+  period: month
+  unit: per provider
+  product: Labs Core or Rx Renewals
+  bundle_price: null
+  bundle_product: Bundle (Labs & Rx)
+  contact_sales: true
+  note: Published as "Enterprise" for both the single-module and bundle columns; no price stated.
+quotas: []
+overage: null
+api_pricing:
+  published: false
+  note: >-
+    Affineon publishes no API or usage-based pricing. Affineon Embed, the white-label
+    program for EHR vendors and AI scribes, carries no published price and is quoted
+    through the "Request Access" form at https://www.affineon.com/embed.
+x-evidence:
+  fetched: '2026-09-12'
+  probes:
+  - url: https://www.affineon.com/labs-core
+    http_status: 200
+  - url: https://www.affineon.com/rx-renewals
+    http_status: 200
+  - url: https://www.affineon.com/embed
+    http_status: 200

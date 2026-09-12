@@ -1,0 +1,69 @@
+name: Affineon Health Client Packages
+description: >-
+  Record of a first-party client-library search for Affineon Health across every
+  public package registry the pipeline queries, plus the company's GitHub
+  organization and its own site. Nothing was found: Affineon publishes no SDK,
+  no CLI binary, no embeddable JavaScript library and no CDN-distributed build.
+  This is an honest zero, not an unchecked gap — the registries below were each
+  queried unauthenticated on the date recorded and each returned no first-party
+  package. No SDKs pointer is wired into apis.yml, because none exists.
+generated: '2026-09-12'
+method: searched
+source: https://github.com/affineon
+package_count: 0
+packages: []
+registries_searched:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=affineon
+  status: 200
+  matches: 0
+- registry: pypi
+  query: https://pypi.org/pypi/affineon/json
+  status: 404
+  matches: 0
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/affineon.json
+  status: 404
+  matches: 0
+- registry: crates.io
+  query: https://crates.io/api/v1/crates?q=affineon
+  status: 200
+  matches: 0
+- registry: nuget
+  query: https://azuresearch-usnc.nuget.org/query?q=affineon
+  status: 200
+  matches: 0
+- registry: maven-central
+  query: https://search.maven.org/solrsearch/select?q=affineon
+  status: 200
+  matches: 0
+- registry: packagist
+  query: https://packagist.org/search.json?q=affineon
+  status: 200
+  matches: 0
+  note: >-
+    Four fuzzy matches returned (mage2pro/ipay88, xtetis/xanyfield,
+    refineon/dingding, refineon/basic). None belongs to Affineon Health; all were
+    rejected.
+- registry: go-proxy
+  query: https://proxy.golang.org/github.com/affineon/@v/list
+  status: 404
+  matches: 0
+- registry: cdn
+  query: Full-text scan of every page in https://www.affineon.com/sitemap.xml
+  status: 200
+  matches: 0
+  note: >-
+    No unpkg, jsDelivr or first-party script-tag distribution is referenced anywhere
+    on the site. The only third-party CDN asset loaded is swiper@11 from jsDelivr,
+    which is a carousel library Affineon consumes, not one it publishes.
+source_of_record:
+  github_org: https://github.com/affineon
+  github_org_status: 200
+  public_repos: 0
+  note: >-
+    The GitHub organization is genuinely Affineon's — its profile blog field is
+    https://affineon.com and it was created 2023-09-25 — but it holds zero public
+    repositories, so there is no source-distributed client either.
+x-evidence:
+  fetched: '2026-09-12'

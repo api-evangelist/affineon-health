@@ -64,5 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Affineon Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Affineon Health is a healthcare AI company whose product is an AI inbox agent that runs inside a
+clinician's existing EHR inbox. Two modules ship today — **Labs Core** (routes CC'd results, groups
+incomplete lab sets, auto-processes normal and clinically insignificant results, trends and
+summarizes the chart, drafts the patient message) and **Rx Renewals** (clears renewal requests that
+meet a practice protocol, escalates the rest) — alongside **Affineon Embed**, a white-label program
+that lets EHR vendors and AI scribes bundle the same agent into their own products. Affineon reaches
+practices chiefly through the athenahealth Marketplace, states it is SOC 2 and HIPAA compliant, and
+publishes per-provider subscription pricing.
+
+Affineon publishes **no developer portal, API reference, SDK, or machine-readable specification**.
+No API host exists: `api.affineon.com`, `docs.affineon.com`, `developers.affineon.com` and
+`app.affineon.com` do not resolve, and certificate transparency for `*.affineon.com` lists only
+`www`, `resources`, `inboxmanagement` and mail infrastructure. The Affineon Embed integration is
+quoted through a "Request Access" form. In this catalog the company is a **consumer** of EHR APIs
+rather than a publisher of one — see `x-coverage` in `apis.yml`.
+
+- https://www.affineon.com/
+- https://www.affineon.com/embed
+- https://marketplace.athenahealth.com/product/affineon-health

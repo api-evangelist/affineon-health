@@ -1,0 +1,38 @@
+name: Affineon Health MCP Posture
+description: >-
+  Record of an MCP server search for Affineon Health. No Model Context Protocol
+  server exists — not hosted, not as a package, and not as a derivable candidate.
+  A candidate tool list cannot be derived either, because Affineon publishes no
+  OpenAPI, GraphQL schema, or any other machine-readable contract from which
+  operations could be read. No MCPServer pointer is wired into apis.yml: this file
+  records a measured absence so the catalog can count it, and asserting an agent
+  surface here would be a fabrication.
+generated: '2026-09-12'
+method: searched
+source: https://www.affineon.com/
+status: none
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: searched
+tools: []
+probes:
+- url: https://inboxmanagement.affineon.com/mcp
+  http_status: 404
+- url: https://resources.affineon.com/mcp
+  http_status: 404
+- url: https://www.affineon.com/.well-known/oauth-protected-resource
+  http_status: 404
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=affineon
+  matches: 0
+notes: >-
+  api.affineon.com, docs.affineon.com and app.affineon.com do not resolve in DNS, so
+  there is no API host on which an /mcp endpoint could live. Certificate-transparency
+  records for *.affineon.com list only cpanel, mail, webmail, webdisk, www,
+  resources and inboxmanagement — no API or developer host of any kind.
+x-evidence:
+  fetched: '2026-09-12'

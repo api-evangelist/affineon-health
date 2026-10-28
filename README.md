@@ -64,22 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Affineon Health is a healthcare AI company whose product is an AI inbox agent that runs inside a
-clinician's existing EHR inbox. Two modules ship today — **Labs Core** (routes CC'd results, groups
-incomplete lab sets, auto-processes normal and clinically insignificant results, trends and
-summarizes the chart, drafts the patient message) and **Rx Renewals** (clears renewal requests that
-meet a practice protocol, escalates the rest) — alongside **Affineon Embed**, a white-label program
-that lets EHR vendors and AI scribes bundle the same agent into their own products. Affineon reaches
-practices chiefly through the athenahealth Marketplace, states it is SOC 2 and HIPAA compliant, and
-publishes per-provider subscription pricing.
+Affineon Health is a healthcare AI company whose product is an AI inbox agent that works inside a clinician's existing EHR inbox rather than as a separate application. Two modules ship today: Labs Core, which routes CC'd results away from the provider, groups incomplete lab sets until they are ready, auto-processes normal and clinically insignificant results, trends and summarizes the chart, and drafts the patient message; and Rx Renewals, which clears prescription renewal requests that meet a practice protocol and escalates the rest for physician review. A third offering, Affineon Embed, is a white-label program letting EHR vendors, AI scribes and other health-technology companies bundle the same inbox agent into their own products — Commure is a named participant. Affineon reaches practices chiefly through the athenahealth Marketplace, states it is SOC 2 and HIPAA compliant, and publishes per-provider subscription pricing. It publishes no developer portal, API reference, SDK or machine-readable specification of any kind: the company is a consumer of EHR APIs, and its own integration surface is quoted through a Request Access form.
 
-Affineon publishes **no developer portal, API reference, SDK, or machine-readable specification**.
-No API host exists: `api.affineon.com`, `docs.affineon.com`, `developers.affineon.com` and
-`app.affineon.com` do not resolve, and certificate transparency for `*.affineon.com` lists only
-`www`, `resources`, `inboxmanagement` and mail infrastructure. The Affineon Embed integration is
-quoted through a "Request Access" form. In this catalog the company is a **consumer** of EHR APIs
-rather than a publisher of one — see `x-coverage` in `apis.yml`.
+**Areas:** Company · Healthcare · Artificial Intelligence · Clinical Workflow · Electronic Health Records · Health IT · Laboratory · Prescriptions · Care Coordination · Physician Burnout
 
-- https://www.affineon.com/
-- https://www.affineon.com/embed
-- https://marketplace.athenahealth.com/product/affineon-health
+## Affineon Health on APIs.io
+
+Everything profiled for Affineon Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/affineon-health/](https://apis.io/providers/affineon-health/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Affineon Health Domain Security](https://apis.io/security/affineon-health/affineon-health-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Affineon Health Plans Pricing](https://apis.io/plans/affineon-health/affineon-health-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.affineon.com/)
+- [Pricing](https://www.affineon.com/labs-core)
+- [Support](https://resources.affineon.com/)
+- [Blog](https://www.affineon.com/news)
+- [Privacy policy](https://www.affineon.com/privacy)
+- [GitHub](https://github.com/affineon)
+
+## API Evangelist rating
+
+**Kin Score 22.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 60.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.1** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/affineon-health/](https://apis.io/providers/affineon-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Affineon Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/affineon-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
